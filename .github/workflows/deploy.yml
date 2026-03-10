@@ -19,7 +19,6 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            cd /path/to/your/app
+            cd /home/prince/wp-docker
             git pull origin main
-            # Make sure .env exists on server (manual first or via secrets if small)
             docker-compose up -d --build
